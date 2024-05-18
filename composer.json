@@ -1,0 +1,28 @@
+{
+  "name": "wylly/wordpress-plugin",
+  "type": "wordpress-plugin",
+  "autoload": {
+    "psr-4": {
+      "Wylly\\Plugin_Name\\": "includes/"
+    },
+    "files": [
+      "includes/Support/helpers.php"
+    ]
+  },
+  "authors": [
+    {
+      "name": "Wyllymk",
+      "email": "wilsonkabatha@gmail.com",
+      "homepage": "https://wilsondevops.com",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "email": "wilsonkabatha@gmail.com"
+  },
+  "license": "GPL-2.0-or-later",
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=7.4"
+  }
+}
