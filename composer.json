@@ -1,9 +1,9 @@
 {
-  "name": "wylly/wordpress-plugin",
+  "name": "wylly/woocommerce-bulk-sms",
   "type": "wordpress-plugin",
   "autoload": {
     "psr-4": {
-      "Wylly\\Plugin_Name\\": "includes/"
+      "Wylly\\WooCommerce_Bulk_SMS\\": "includes/"
     },
     "files": [
       "includes/Support/helpers.php"

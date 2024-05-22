@@ -7,18 +7,18 @@ namespace Composer\Autoload;
 class ComposerStaticInit70d9a22a1785c9ab818807c173ba2a96
 {
     public static $files = array (
-        'e5093c58d913079a2c2eeb7313d0363b' => __DIR__ . '/../..' . '/includes/Support/helpers.php',
+        '27e5ec60a317f4cae1c25a78b322475c' => __DIR__ . '/../..' . '/includes/Support/helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
         'W' => 
         array (
-            'Wylly\\Plugin_Name\\' => 18,
+            'Wylly\\WooCommerce_Bulk_SMS\\' => 27,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Wylly\\Plugin_Name\\' => 
+        'Wylly\\WooCommerce_Bulk_SMS\\' => 
         array (
             0 => __DIR__ . '/../..' . '/includes',
         ),

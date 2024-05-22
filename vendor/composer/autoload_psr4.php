@@ -6,5 +6,5 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Wylly\\Plugin_Name\\' => array($baseDir . '/includes'),
+    'Wylly\\WooCommerce_Bulk_SMS\\' => array($baseDir . '/includes'),
 );

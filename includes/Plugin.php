@@ -6,8 +6,8 @@
 * @link http://wilsondevops.com
 * @since 1.0.0
 *
-* @package Plugin_Name
-* @subpackage Plugin_Name/includes
+* @package WooCommerce_Bulk_SMS
+* @subpackage WooCommerce_Bulk_SMS/includes
 */
 
 /**
@@ -15,12 +15,12 @@
 *
 *
 * @since 1.0.0
-* @package Plugin_Name
-* @subpackage Plugin_Name/includes
+* @package WooCommerce_Bulk_SMS
+* @subpackage WooCommerce_Bulk_SMS/includes
 * @author Wilson Devops <wilsonkabatha@gmail.com>
 */
 
-namespace Wylly\Plugin_Name;
+namespace Wylly\WooCommerce_Bulk_SMS;
 
 final class Plugin {
 
@@ -49,7 +49,8 @@ final class Plugin {
           self::deactivate();
        } );
 
-       // Other initialization code...
+       // Initialize WooCommerce functionality
+       add_action('woocommerce_loaded', [WooCommerceBulkSMS::class, 'init']);
 
        return $plugin;
     }
