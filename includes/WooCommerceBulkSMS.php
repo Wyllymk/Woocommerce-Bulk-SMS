@@ -97,6 +97,33 @@ class WooCommerceBulkSMS {
         ?>
 <div class="wrap">
     <h1><?php esc_html_e('Mobile Sasa Bulk SMS', 'woocommerce-bulk-sms'); ?></h1>
+    <div class="ga-welcome-panel welcome-panel">
+        <a href="<?php echo admin_url('admin.php?page=wc_bulk_sms&wc_bulk_sms-welcome=0')?>"
+            class="ga-welcome-panel-close welcome-panel-close" aria-label="Dismiss the welcome panel">Dismiss</a>
+        <div class="ga-welcome-panel-content">
+            <h3><?php esc_html_e( 'Thanks for installing Mobile Sasa Bulk SMS!', 'woocommerce-bulk-sms' ); ?></h3>
+
+            <p class="about-description">Here's how to get started:</p>
+            <div class="ga-welcome-panel-column-container">
+                <div class="ga-welcome-panel-column">
+                    <h4>Actions</h4>
+                    <ul>
+                        <li class="welcome-icon welcome-edit-page">
+                            <?php
+                        $woocommerce_credentials_url = esc_url(add_query_arg('page', 'wc-settings&tab=advanced&section=wcbulksms', admin_url('admin.php')));
+                        printf(
+                            __('Add your <a href="%s">MOBILE SASA</a> credentials', 'woocommerce-bulk-sms'),
+                            $woocommerce_credentials_url
+                        );
+                        ?>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h3><?php esc_html_e('Available Customers', 'woocommerce-bulk-sms'); ?></h3>
     <form method="post" action="<?php echo esc_url(admin_url('admin-post.php')); ?>">
         <input type="hidden" name="action" value="send_bulk_sms">
         <?php wp_nonce_field('send_bulk_sms_nonce'); ?>
@@ -199,6 +226,7 @@ document.getElementById('select_all').addEventListener('change', function(e) {
         return array_values($customers);
     }
 
+    // Display custom checkout field
     public static function sms_opt_in_checkout($checkout) {
         woocommerce_form_field('sms_opt_in', [
             'type' => 'checkbox',
