@@ -22,7 +22,7 @@
 
 namespace Wylly\Plugin_Name;
 
-class Plugin {
+final class Plugin {
 
     protected static ?self $instance = null;
 
